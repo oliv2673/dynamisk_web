@@ -1,0 +1,20 @@
+html {
+    --brand_color: #E6DCD4;
+    --secondary: #292B29;
+    --tertiary: #ED8634;
+    --quaternary: #FFFFFF;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 40px;
+    --space-xxl: 50px;
+    --font-xxs: 20px;
+    --font-xs: 22px;
+    --font-sm: 25px;
+    --font-md: 35px;
+    --font-lg: 40px;
+    --font-regular: 400;
+    --font-medium: 500;
+}
+
+/*Fonts*/
