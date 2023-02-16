@@ -18,3 +18,18 @@ html {
 }
 
 /*Fonts*/
+@font-face {
+    font-family: "Medium";
+    src: url(fonts/ArimaMadurai-Medium.woff2);
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url(fonts/Kodchasan-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url(fonts/SegoeScript-Bold.woff2);
+}
+
