@@ -28,6 +28,7 @@ img {
     height: auto;
     display: block;
 }
+
 /*Fonts*/
 @font-face {
     font-family: "Medium";
@@ -72,10 +73,18 @@ img {
     border:2px solid hotpink;
 }
 
-.icons {
-    width: 35%;
+.icon_1-1 {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    margin-top: 5px;
 }
 
+.icons {
+    width: 15%;
+}
 
-
-
+.grid_1-5 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
