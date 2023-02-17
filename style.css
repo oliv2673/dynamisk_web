@@ -29,6 +29,10 @@ img {
     display: block;
 }
 
+main {
+    background-color: var(--brand_color);
+}
+
 /*Fonts*/
 @font-face {
     font-family: "Medium";
