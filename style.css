@@ -17,6 +17,17 @@ html {
     --font-medium: 500;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /*Fonts*/
 @font-face {
     font-family: "Medium";
@@ -38,9 +49,11 @@ html {
     grid-template-columns: 1fr 2fr;
 }
 
+
 .grid_1-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .grid_1-1-1 {
@@ -58,4 +71,11 @@ html {
     grid-template-columns: 1fr 2fr;
     border:2px solid hotpink;
 }
+
+.icons {
+    width: 35%;
+}
+
+
+
 
