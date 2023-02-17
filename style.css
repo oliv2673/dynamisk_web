@@ -33,7 +33,6 @@ html {
     src: url(fonts/SegoeScript-Bold.woff2);
 }
 
-/*Product*/
 .grid_1-2 {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -53,3 +52,10 @@ html {
     margin-left: 200px;
 
 }
+
+.dish_card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border:2px solid hotpink;
+}
+
