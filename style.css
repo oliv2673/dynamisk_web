@@ -94,7 +94,7 @@ main {
 .dish_card {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border:2px solid hotpink;
+    border:2px solid black;
 }
 
 .icon_1-1 {
