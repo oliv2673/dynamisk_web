@@ -38,6 +38,13 @@ main {
   margin-inline: auto;
 }
 
+@media (max-width: 600px) {
+  main {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+
 /*Fonts*/
 @font-face {
   font-family: "Medium";
