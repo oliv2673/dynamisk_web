@@ -1,0 +1,17 @@
+.list,
+.list ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.list h2 {
+  text-decoration: underline 2px;
+  padding: 3px;
+  margin-top: 50px;
+}
+
+.category_1-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 90px;
+}
