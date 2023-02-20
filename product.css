@@ -38,6 +38,11 @@
     main {
         margin: 0px 70px;
     }
+
+    .ingrediens_list {
+        border-right: 2px;
+        border-color: var(--secondary);
+    }
 }
 
 /*Web*/
