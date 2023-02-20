@@ -1,9 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.img_filter {
+  filter: brightness(50%);
+}
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Hide the images by default */
@@ -16,7 +32,7 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -67,7 +83,8 @@
   height: 15px;
   width: 15px;
   margin: 0.5rem;
-  background-color: #bbb;
+  background-color: #ed8634;
+  opacity: 0.9;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -75,14 +92,10 @@
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #f4e1d6;
+  opacity: 0.8;
 }
 
-.dots {
-  position: absolute;
-  top: 75%;
-  left: 45%;
-}
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -102,9 +115,15 @@
 a {
   text-decoration: none;
 }
+.logo {
+  position: absolute;
+  top: 30%;
+  left: 26%;
+  width: 23%;
+}
 .pos {
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 34%;
 }
 .button {
@@ -117,9 +136,25 @@ a {
   opacity: 0.75;
   font-family: "Arima Madurai", cursive;
   font-size: 1.6rem;
-  margin-bottom: 16rem;
+  margin-bottom: 10rem;
   margin-left: 2rem;
 }
 .button:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 799px) {
+  .button {
+    display: inline-block;
+    margin-bottom: 3rem;
+    left: 10%;
+  }
+  .pos {
+    position: absolute;
+    top: 10%;
+  }
+  .dots {
+    position: absolute;
+    left: 12%;
+  }
 }
