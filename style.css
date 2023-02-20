@@ -29,8 +29,20 @@ img {
   display: block;
 }
 
-main {
+body {
   background-color: var(--brand_color);
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 400px;
+    margin-inline: auto;
+  }
 }
 
 /*Fonts*/
