@@ -167,7 +167,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .toggle-btn {
     background: transparent;
     border: none;
