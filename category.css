@@ -1,3 +1,4 @@
+/* Generel */
 .list,
 .list ul {
   list-style-type: none;
@@ -25,44 +26,37 @@ a {
   color: #292b29;
 }
 
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Mobil */
+@media (max-width: 800px) {
+  .Europakort {
+    display: none;
+  }
 }
 
-.category_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-top: 20px;
-  grid-column: 1/2;
-}
+/* Web */
 
-.kort {
-  display: grid;
-}
+@media (min-width: 800px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.Europakort {
-  grid-column: 2/3;
-  grid-row: span 1;
-}
+  .category_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+    grid-column: 1/2;
+  }
+  .kort {
+    display: grid;
+  }
 
-.Europakort {
-  clip-path: polygon(
-    35% 36%,
-    38% 46%,
-    40% 46%,
-    43% 47%,
-    49% 45%,
-    52% 47%,
-    55% 36%,
-    59% 32%,
-    68% 27%,
-    62% 1%,
-    51% 2%,
-    34% 20%
-  );
-}
+  .Europakort {
+    grid-column: 2/3;
+    grid-row: span 1;
+  }
 
-.markedText {
-  color: red;
+  .mobil {
+    display: none;
+  }
 }

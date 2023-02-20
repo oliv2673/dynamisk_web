@@ -1,4 +1,4 @@
-fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter?category", {
+fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter", {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
@@ -21,11 +21,4 @@ function showCategory(cat) {
   copy.querySelector("a").textContent = cat.subcategory;
   //append
   document.querySelector("#nordisk").appendChild(copy); */
-}
-
-document.querySelector(".Europakort").addEventListener("mouseover", nordisk);
-
-function nordisk() {
-  console.log("nordisk");
-  document.querySelector("#nordisk a").classList.add("markedText");
 }
