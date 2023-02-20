@@ -1,5 +1,5 @@
 /*mobile*/
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .grid_1-2 {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -48,12 +48,10 @@
 
     main {
         margin-inline: auto;
-        margin: 0px 65px;
     }
 
 
 }
-
 
 .grid_1-1-1 {
     display: grid;

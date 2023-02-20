@@ -76,8 +76,8 @@ main {
 }
 
 @font-face {
-  font-family: "kodchasan_bold";
-  src: url(fonts/SegoeScript-Bold.woff2);
+  font-family: "kodchasan_semibold";
+  src: url(fonts/Kodchasan-SemiBold.woff2);
 }
 
 @font-face {
