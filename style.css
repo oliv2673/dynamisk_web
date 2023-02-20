@@ -146,4 +146,6 @@ footer {
   }
 }
 
-
+.display_none {
+  display: none;
+}
