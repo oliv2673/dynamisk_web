@@ -75,6 +75,10 @@ form {
 }
 
 @media (min-width: 600px) {
+  main {
+    max-width: none;
+    margin: 0px 40px;
+  }
   .grid_1-5 {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -83,6 +87,8 @@ form {
   .grid_1-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
   }
 
   .grid_1-1-1 {
@@ -102,6 +108,7 @@ form {
     grid-template-columns: 1fr 2fr;
     border: 2px solid black;
     background-color: var(--quaternary);
+    margin: 0px;
   }
   .dish_card h1 {
     color: var(--quaternary);
@@ -126,7 +133,7 @@ form {
     display: flex;
     flex-direction: column;
     margin: 20px 10px 0px 0px;
-    padding: 20px 5px 20px 10px;
+    padding: 20px 5px 10px 10px;
     background-color: #f3f0ed;
   }
 }
