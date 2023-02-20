@@ -178,10 +178,6 @@ footer {
     cursor: pointer;
   }
 
-  nav {
-    display: none;
-  }
-
   nav.shown {
     padding-top: 1rem;
     display: flex;
