@@ -29,8 +29,13 @@ img {
   display: block;
 }
 
-main {
+body {
   background-color: var(--brand_color);
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 /*Fonts*/

@@ -25,7 +25,23 @@
         gap: 7px;
         margin-top: 5px;
     }
+
+    .opskrift_info {
+        margin-left: 30px;
+    }
+
+    .opskrift_pic {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
 }
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+}
+
 
 .grid_1-1-1 {
     display: grid;
@@ -44,8 +60,8 @@
     gap: 7px;
     margin-top: 5px;
 }
- @media (max-width: 600px) {
-    h1 {
-        text-align: center;
-    }
- }
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
