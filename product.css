@@ -34,11 +34,21 @@
         margin-top: 35px;
         margin-bottom: 30px;
     }
+
+    main {
+        margin: 0px 70px;
+    }
 }
 
+/*Web*/
 @media (max-width: 600px) {
     h1 {
         text-align: center;
+    }
+
+    main {
+        margin-inline: auto;
+        margin: 0px 65px;
     }
 }
 
