@@ -161,3 +161,32 @@ footer {
 .display_none {
   display: none;
 }
+
+/* burgermenu */
+.toggle-btn {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  nav.shown {
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+}
