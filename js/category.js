@@ -22,3 +22,10 @@ function showCategory(cat) {
   //append
   document.querySelector("#nordisk").appendChild(copy); */
 }
+
+document.querySelector(".Europakort").addEventListener("mouseover", nordisk);
+
+function nordisk() {
+  console.log("nordisk");
+  document.querySelector("#nordisk a").classList.add("markedText");
+}
