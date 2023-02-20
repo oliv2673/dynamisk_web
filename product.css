@@ -1,4 +1,4 @@
-/*mobile*/
+/*web*/
 @media (min-width: 800px) {
     .grid_1-2 {
         display: grid;
@@ -45,7 +45,7 @@
     }
 }
 
-/*Web*/
+/*mobile*/
 @media (max-width: 800px) {
     h1 {
         text-align: center;
