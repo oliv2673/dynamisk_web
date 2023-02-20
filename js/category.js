@@ -12,7 +12,7 @@ function showCategories(cats) {
 }
 
 function showCategory(cat) {
-  //fang template
+  /*   //fang template
   const template = document.querySelector("template").content;
   //lav kopi
   const copy = template.cloneNode(true);
@@ -20,5 +20,5 @@ function showCategory(cat) {
   copy.querySelector("a").href = "productlist.html?subcategory=" + cat.subcategory;
   copy.querySelector("a").textContent = cat.subcategory;
   //append
-  document.querySelector("#nordisk").appendChild(copy);
+  document.querySelector("#nordisk").appendChild(copy); */
 }
