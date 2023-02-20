@@ -1,0 +1,60 @@
+@media (min-width: 600px) {
+  .grid_1-5 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .icon_1-1 {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    margin-top: 5px;
+  }
+
+  .dish_card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 2px solid black;
+    background-color: var(--quaternary);
+  }
+  .dish_card h1 {
+    color: var(--quaternary);
+    background-color: var(--tertiary);
+    font-family: "Arima_regular";
+    padding-left: 10px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .dropdown_grid {
+    margin: 20px 10px 0px 0px;
+    padding: 20px 5px 20px 10px;
+    background-color: #f3f0ed;
+  }
+
+  .checkbox_grid {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 0px 0px;
+    padding: 20px 5px 20px 10px;
+    background-color: #f3f0ed;
+  }
+}
+
+.icons {
+  width: 15%;
+}
