@@ -1,3 +1,79 @@
+.grid_1-5 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+form {
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 10px;
+
+  font-family: "kodchasan_semibold";
+}
+
+.dropdown_grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 10px 0px 0px;
+  padding: 20px 5px 20px 10px;
+  background-color: #f3f0ed;
+}
+
+.checkbox_grid {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px 0px 0px;
+  padding: 20px 5px 20px 10px;
+  background-color: #f3f0ed;
+  font-size: 0.9rem;
+}
+.checkbox_grid .grid_1-1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.icon_1-1 {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-top: 5px;
+}
+
+.dish_card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 0.5px solid #fdb8907b;
+  background-color: var(--quaternary);
+  margin: 10px 0px;
+}
+.dish_card h1 {
+  color: var(--quaternary);
+  background-color: var(--tertiary);
+  font-family: "Arima_regular";
+  font-size: 1.6rem;
+  padding-left: 10px;
+}
+.grid_1-1-1 p {
+  font-family: "Bold";
+  font-size: 0.8rem;
+}
+.beskrivelse {
+  font-family: "Regular";
+}
+
 @media (min-width: 600px) {
   .grid_1-5 {
     display: grid;
@@ -58,4 +134,3 @@
 .icons {
   width: 15%;
 }
-
