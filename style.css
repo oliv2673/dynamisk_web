@@ -40,8 +40,32 @@ main {
 }
 
 @font-face {
+  font-family: "Arima_bold";
+  src: url(fonts/ArimaMadurai-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Arima_regular";
+  src: url(fonts/ArimaMadurai-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Arima_thin";
+  src: url(fonts/ArimaMadurai-Thin.woff2);
+}
+@font-face {
   font-family: "Regular";
   src: url(fonts/Kodchasan-Regular.woff2);
+}
+
+@font-face {
+  font-family: "kodchasan_bold";
+  src: url(fonts/Kodchasan-Bold.woff2);
+}
+
+@font-face {
+  font-family: "kodchasan_bold";
+  src: url(fonts/SegoeScript-Bold.woff2);
 }
 
 @font-face {
@@ -122,63 +146,6 @@ footer {
   }
 }
 
-/*Category*/
-.list,
-.list ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-.list h2 {
-  text-decoration: underline 2px;
-  padding: 3px;
-  margin-top: 50px;
-}
-
-.category_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 90px;
-}
-
-/*Product og productlist*/
-.grid_1-2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid_1-1-1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.diæt {
-  margin-left: 200px;
-}
-
-.dish_card {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  border: 2px solid black;
-}
-
-.icon_1-1 {
-  display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
-  margin-top: 5px;
-}
-
-.icons {
-  width: 15%;
-}
-
-.grid_1-5 {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+.display_none {
+  display: none;
 }

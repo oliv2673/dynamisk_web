@@ -1,7 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-fetch("https://kea-alt-del.dk/t7/api/products/" + id)
+fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter" + id, {
+  method: "get",
+  headers: {
+    "x-apikey": "63f32ac7478852088da68490",
+  },
+})
   .then((response) => response.json())
   .then((data) => showProduct(data));
 
@@ -12,5 +17,7 @@ function showProduct(product) {
   document.querySelector("span.brandname").textContent = product.brandname;
   document.querySelector("span.category").textContent = product.category;
   document.querySelector("span.articletype").textContent = product.articletype;
-  document.querySelector(".product_show img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  document.querySelector(
+    ".product_show img"
+  ).src = `https://madopskrifter-41a3.restdb.io/rest/opskrifter/${product.id}.webp`;
 }
