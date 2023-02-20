@@ -40,8 +40,32 @@ main {
 }
 
 @font-face {
+  font-family: "Arima_bold";
+  src: url(fonts/ArimaMadurai-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Arima_regular";
+  src: url(fonts/ArimaMadurai-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Arima_thin";
+  src: url(fonts/ArimaMadurai-Thin.woff2);
+}
+@font-face {
   font-family: "Regular";
   src: url(fonts/Kodchasan-Regular.woff2);
+}
+
+@font-face {
+  font-family: "kodchasan_bold";
+  src: url(fonts/Kodchasan-Bold.woff2);
+}
+
+@font-face {
+  font-family: "kodchasan_bold";
+  src: url(fonts/SegoeScript-Bold.woff2);
 }
 
 @font-face {
