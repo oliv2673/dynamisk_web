@@ -99,7 +99,26 @@ input:checked + span {
     text-decoration: line-through;
 }
 
+
+
 /*FONTS*/
+
  h1 {
     font-family: "Medium";
+ }
+
+ ol li, p {
+    font-family: "Regular";
+ }
+
+ ul li {
+    font-family: "kodchasan_semibold";
+ }
+
+ .prepTime, .cookTime, .portion, .diæter {
+    font-family: "Bold";
+ }
+
+ ol {
+    font-family: "Arima_bold"
  }
