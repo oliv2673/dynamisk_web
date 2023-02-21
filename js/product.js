@@ -22,8 +22,6 @@ function showProduct(product) {
   document.querySelector(".opskrift_pic").src = `img/${product.img}`;
   document.querySelector("ol").textContent = product.walkthrough;
 
-  
-
   product.ingredients.forEach(showIngredients);
 
   function showIngredients(ingrediens){
