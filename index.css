@@ -4,8 +4,7 @@
   padding: 0;
 }
 img {
-  min-width: 100%;
-  min-height: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 
@@ -14,9 +13,13 @@ img {
 }
 /* Slideshow container */
 .slideshow-container {
-  z-index: 0;
+  display: contents;
+  position: relative;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 /* Hide the images by default */
@@ -28,6 +31,7 @@ img {
 .prev,
 .next {
   cursor: pointer;
+  position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
@@ -40,13 +44,12 @@ img {
   user-select: none;
   z-index: 1;
 }
-
 .prev {
-  grid-column: 1/2;
+  left: 0;
 }
 /* Position the "next button" to the right */
 .next {
-  grid-column: 3/4;
+  right: 0;
   border-radius: 3px 0 0 3px;
 }
 
@@ -61,6 +64,7 @@ img {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
+  position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -109,52 +113,152 @@ img {
   }
 }
 
-.overlay_grid {
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 20px 1fr 20px;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-}
 /******** Buttons ********/
 a {
   text-decoration: none;
 }
 .logo {
-  grid-column: 2/3;
+  position: absolute;
   top: 30%;
-  left: 26%;
-  width: 23%;
+  width: 60%;
+  left: 20%;
 }
-
-.button_grid {
-  display: grid;
-  grid-column: 2/3;
+.logo img {
+  width: 100%;
+}
+.pos {
+  position: absolute;
+  top: 55%;
+  left: 34%;
+}
+.button {
+  display: flex;
+  height: 300px;
   padding: 5px 40px;
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+
   border: 1px;
   border-radius: 25px;
   opacity: 0.75;
   font-family: "Arima Madurai", cursive;
   font-size: 1.6rem;
-  margin-bottom: 10rem;
-  margin-left: 2rem;
+  /* margin-bottom: 10rem; */
+  /*   margin-left: 2rem;*/
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 293px);
 }
-.button:hover {
-  opacity: 0.9;
+.button a {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  align-self: flex-start;
 }
 
-@media (max-width: 799px) {
+.oversigt {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px 40px;
+  border: 1px;
+  border-radius: 25px;
+}
+
+.opskrifter {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px 40px;
+  border: 1px;
+  border-radius: 25px;
+}
+.oversigt:hover,
+.opskrifter:hover {
+  opacity: 90%;
+}
+.dots {
+  align-self: flex-end;
+}
+
+/* @media (max-width: 799px) {
   .button {
     display: inline-block;
     margin-bottom: 3rem;
     left: 10%;
   }
-
-  .dots {
+  .pos {
+    position: absolute;
+    top: 10%;
   }
-}
+  .dots {
+    position: absolute;
+    left: 12%;
+  }
+} */
 
-.b1 {
-  background-image: url(img/forside/2.webp);
+.slideshow-container_2 {
+  display: none;
+}
+@media (max-width: 600px) {
+  .slideshow-container_2 {
+    display: contents;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .slideshow-container {
+    display: none;
+  }
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  .prev,
+  .next {
+    display: none;
+  }
+  /* Next & previous buttons */
+  .prev2,
+  .next2 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1;
+  }
+  .prev2 {
+    left: 0;
+  }
+  /* Position the "next button" to the right */
+  .next2 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev2:hover,
+  .next2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .button {
+    height: 300px;
+    left: calc(50% - 240px);
+  }
+  .button a {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    align-self: flex-start;
+  }
+  .logo {
+    width: 80%;
+    left: 10%;
+  }
 }
