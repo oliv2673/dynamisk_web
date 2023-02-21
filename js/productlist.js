@@ -79,7 +79,7 @@ function showProduct(product) {
   copy.querySelector(".cooktime").textContent = product.cookTime;
   copy.querySelector(".antal").textContent = product.portion;
   copy.querySelector(".beskrivelse").textContent = product.description;
-  copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  //copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector("article").setAttribute("href", `product.html?id=${product.id}`);
 
   //vegetarisk
@@ -89,7 +89,7 @@ function showProduct(product) {
 
     console.log("added vegetarisk");
   } else {
-    copy.querySelector(".vegetarisk").classList.add("displaynone");
+    copy.querySelector(".vegetarisk").classList.add("display_none");
   }
   //vegansk
   if (vegan == true) {
@@ -98,7 +98,7 @@ function showProduct(product) {
 
     console.log("added vegansk");
   } else {
-    copy.querySelector(".vegansk").classList.add("displaynone");
+    copy.querySelector(".vegansk").classList.add("display_none");
   }
   //pescetar
   /* if (pescetar == true) {
@@ -107,7 +107,7 @@ function showProduct(product) {
 
     console.log("added pescetar");
   } else {
-    copy.querySelector(".pescetar").classList.add("displaynone");
+    copy.querySelector(".pescetar").classList.add("display_none");
   } */
 
   //append (sæt ind)
