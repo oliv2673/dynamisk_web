@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("_id");
 
-fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
+fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter" + id, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
