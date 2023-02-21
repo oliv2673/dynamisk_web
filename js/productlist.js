@@ -80,7 +80,7 @@ function showProduct(product) {
   copy.querySelector(".antal").textContent = product.portion;
   copy.querySelector(".beskrivelse").textContent = product.description;
   //copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  copy.querySelector("article").setAttribute("href", `product.html?id=${product.id}`);
+  copy.querySelector("article").setAttribute("href", `product.html?id=${product._id}`);
 
   //vegetarisk
   if (vegetarian == true) {
