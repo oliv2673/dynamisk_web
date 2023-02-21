@@ -130,6 +130,9 @@ nav ul.menu li a {
   text-align: end;
 }
 footer {
+  position: relative;
+  width: 100%;
+  height: auto;
   background-color: #f5bd91;
 }
 
