@@ -165,6 +165,9 @@ footer {
   nav ul.menu li a {
     font-size: 2rem;
   }
+  .burgermenu {
+    align-self: center;
+  }
 }
 
 .display_none {
