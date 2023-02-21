@@ -73,6 +73,18 @@ form {
 .beskrivelse {
   font-family: "Regular";
 }
+.show_vegetarisk {
+  display: block;
+  display: contents;
+}
+.show_vegansk {
+  display: block;
+  display: contents;
+}
+.show_pescetar {
+  display: block;
+  display: contents;
+}
 
 @media (min-width: 600px) {
   main {
