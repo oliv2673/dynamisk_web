@@ -182,11 +182,12 @@ footer {
     display: block;
     min-width: 44px;
     min-height: 44px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     text-align: end;
     align-self: end;
     padding-top: 1.8rem;
+    color: white;
   }
 
   nav.shown {
