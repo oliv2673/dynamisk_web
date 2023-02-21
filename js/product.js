@@ -19,11 +19,10 @@ function showProduct(product) {
   document.querySelector(".cookTime").textContent = product.cookTime + "min.";
   document.querySelector(".portion").textContent = product.portions + "pers.";
   document.querySelector(".beskrivelse").textContent = product.description;
-  
-  
-  //Appende
-  //document.querySelector("main").appendChild(copy);
+  document.querySelector(".opskrift_pic").src = ``
 }
+
+/*${product.id}*/
 
 /*
 _id: "63f28a6caa86075000065d95"
