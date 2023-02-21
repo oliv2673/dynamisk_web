@@ -36,13 +36,17 @@
         <div class="numbertext">4 / 6</div>
         <img class="img_filter" src="img/forside/4.webp" style="width: 100%" alt="3">
       </div>
+
       <div class="overlay_grid">
         <div class="logo">
           <img src="img/orangeLogo.svg" alt="logo">
         </div>
-        <div class="button">
+        <div class="button_grid">
           <a class="button oversigt" href="category.html"> Oversigt </a>
           <a class="button opskrifter" href="productlist.html">Opskrifter</a>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
           <!-- The dots/circles -->
           <div class="dots" style="text-align: center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -51,9 +55,7 @@
             <span class="dot" onclick="currentSlide(4)"></span>
           </div>
         </div>
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+
       </div>
     </div>
   </main>
