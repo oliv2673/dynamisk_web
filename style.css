@@ -94,7 +94,7 @@ header {
   align-self: center;
 }
 header a {
-  align-self: center;
+  align-self: flex-start;
   margin-top: 15px;
 }
 .logo {
@@ -108,7 +108,7 @@ nav {
 ul.menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   gap: 20px;
 }
 nav ul.menu li {
@@ -121,12 +121,19 @@ nav ul.menu li a {
   font-size: 1.5rem;
   color: var(--quaternary);
 }
-
+.burgermenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  /*   align-self: center; */
+  text-align: end;
+}
 footer {
   background-color: #f5bd91;
 }
 
 @media (min-width: 750px) {
+  /*pc*/
   header {
     /* display: flex;
       justify-content: space-between; */
@@ -168,6 +175,7 @@ footer {
 }
 
 @media (max-width: 750px) {
+  /*mobil*/
   .toggle-btn {
     background: transparent;
     border: none;
@@ -176,6 +184,9 @@ footer {
     min-height: 44px;
     font-size: 1.1rem;
     cursor: pointer;
+    text-align: end;
+    align-self: end;
+    padding-top: 1.8rem;
   }
 
   nav.shown {
