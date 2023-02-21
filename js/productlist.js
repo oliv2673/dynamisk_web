@@ -70,29 +70,46 @@ function sorting() {
 function showProduct(product) {
   console.log(product);
   //fang template
-  //const template = document.querySelector("#firstView_product_template").content;
+  const template = document.querySelector("#product_template").content;
   //lav kopi    true = du vil have alt indhold ("børnene")
-  //const copy = template.cloneNode(true);
+  const copy = template.cloneNode(true);
   //ændre indhold
-  /* copy.querySelector("h2").textContent = product.productdisplayname;
-  copy.querySelector(".articletype").textContent = product.articletype;
-  copy.querySelector(".brand").textContent = product.brandname;
-  copy.querySelector(".price").textContent = `DKK ${product.price},-`;
+  copy.querySelector("h1").textContent = product.titel;
+  copy.querySelector(".preptime").textContent = product.prepTime;
+  copy.querySelector(".cooktime").textContent = product.cookTime;
+  copy.querySelector(".antal").textContent = product.portion;
+  copy.querySelector(".beskrivelse").textContent = product.description;
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  copy.querySelector(".read_more").setAttribute("href", `product.html?id=${product.id}`); */
+  copy.querySelector("article").setAttribute("href", `product.html?id=${product.id}`);
 
   //vegetarisk
-  /* 
-  if (product.discount) {
-    copy.querySelector(".discount_tag").classList.add("vegetarisk");
-    copy.querySelector("p.type").textContent = `Vegetarisk ${(src = "img/")}`;
+  if (vegetarian == true) {
+    copy.querySelector(".vegetarisk").classList.add("show_vegetarisk");
+    copy.querySelector(".vegetarisk p").textContent = "Vegetarisk";
 
     console.log("added vegetarisk");
+  } else {
+    copy.querySelector(".vegetarisk").classList.add("displaynone");
+  }
+  //vegansk
+  if (vegan == true) {
+    copy.querySelector(".vegansk").classList.add("show_vegansk");
+    copy.querySelector(".vegansk p").textContent = "Vegansk";
+
+    console.log("added vegansk");
+  } else {
+    copy.querySelector(".vegansk").classList.add("displaynone");
+  }
+  //pescetar
+  /* if (pescetar == true) {
+    copy.querySelector(".pescetar").classList.add("show_pescetar");
+    copy.querySelector(".pescetar p").textContent = "pescetar";
+
+    console.log("added pescetar");
+  } else {
+    copy.querySelector(".pescetar").classList.add("displaynone");
   } */
 
-  //   if (product.soldout) {
-  //     copy.querySelector("#status").classList.add(".soldout");
-  //   }
   //append (sæt ind)
-  // document.querySelector(".list_grid").appendChild(copy);
+  document.querySelector(".grid_1-1").appendChild(copy);
 }

@@ -79,38 +79,48 @@
           </form>
         </div>
         <div class="grid_1-1">
-          <article class="dish_card">
-            <img src="img/danmark_dessert1.webp" alt="billede af opskrift" />
-            <section>
-              <h1>Titel</h1>
-              <div class="grid_1-1-1">
-                <div>
-                  <div class="icon_1-1">
-                    <img class="icons" src="img/icons/prep_time.svg" alt="prepTime" />
-                    <p>...min</p>
+          <template id="product_template">
+            <article class="dish_card">
+              <img src="img/danmark_dessert1.webp" alt="billede af opskrift" />
+              <section>
+                <h1>Titel</h1>
+                <div class="grid_1-1-1">
+                  <div>
+                    <div class="icon_1-1">
+                      <img class="icons" src="img/icons/prep_time.svg" alt="prepTime" />
+                      <p class="preptime">...min</p>
+                    </div>
+                    <div class="icon_1-1">
+                      <img class="icons" src="img/icons/cook_time.svg" alt="cookTime" />
+                      <p class="cooktime">...min</p>
+                    </div>
                   </div>
-                  <div class="icon_1-1">
-                    <img class="icons" src="img/icons/cook_time.svg" alt="cookTime" />
-                    <p>...min</p>
+                  <div>
+                    <div class="icon_1-1">
+                      <img class="icons" src="img/icons/persons.svg" alt="portion" />
+                      <p class="antal">...pers</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="icon_1-1 vegetarisk">
+                      <img class="icons" src="xx" alt="diæt" />
+                      <p>vegetarisk</p>
+                    </div>
+                    <div class="icon_1-1 vegansk">
+                      <img class="icons" src="xx" alt="diæt" />
+                      <p>vegansk</p>
+                    </div>
+                    <div class="icon_1-1 pescetar">
+                      <img class="icons" src="xx" alt="diæt" />
+                      <p>pescetar</p>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div class="icon_1-1">
-                    <img class="icons" src="img/icons/persons.svg" alt="portion" />
-                    <p>...pers</p>
-                  </div>
-                </div>
-                <div>
-                  <div class="icon_1-1">
-                    <img class="icons" src="xx" alt="diæt" />
-                    <p>veg/pes</p>
-                  </div>
-                </div>
-              </div>
-              <p class="beskrivelse">Beskrivelse</p>
-            </section>
-          </article>
-          <article class="dish_card">
+                <p class="beskrivelse">Beskrivelse</p>
+              </section>
+            </article>
+          </template>
+          <!-- <article class="dish_card">
             <img src="xx" alt="billede af opskrift" />
             <section>
               <h1>Titel</h1>
@@ -171,7 +181,7 @@
               </div>
               <p>Beskrivelse</p>
             </section>
-          </article>
+          </article> -->
         </div>
       </div>
     </div>
