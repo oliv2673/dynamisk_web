@@ -20,6 +20,9 @@ function showProduct(product) {
   document.querySelector(".portion").textContent = product.portions + "pers.";
   document.querySelector(".beskrivelse").textContent = product.description;
   document.querySelector(".opskrift_pic").src = `img/${product.img}`;
+  document.querySelector("ol").textContent = product.walkthrough;
+
+  
 
   product.ingredients.forEach(showIngredients);
 
@@ -27,7 +30,7 @@ function showProduct(product) {
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
     copy.querySelector("li").textContent = ingrediens ;
-    document.querySelector("ul").appendChild(copy);
+    document.querySelector(".ingrediens_list").appendChild(copy);
   }
 }
 
