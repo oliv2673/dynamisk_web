@@ -14,12 +14,12 @@ fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter", {
 function showProduct(product) {
   console.log(product);
 
-  /*document.querySelector("h1").textContent = product.titel;
-  document.querySelector(".prepTime").textContent = product.prepTime + "min";
-  document.querySelector(".cookTime").textContent = product.cookTime;
-  document.querySelector(".portion").textContent = product.portions;
-  document.querySelector(".beskrivelse).textContent = product.descriptiom;
-  */
+  document.querySelector("h1").textContent = product.titel;
+  document.querySelector(".prepTime").textContent = product.prepTime + "min.";
+  document.querySelector(".cookTime").textContent = product.cookTime + "min.";
+  document.querySelector(".portion").textContent = product.portions + "pers.";
+  document.querySelector(".beskrivelse").textContent = product.description;
+  
   
   //Appende
   //document.querySelector("main").appendChild(copy);
