@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
+const id = urlParams.get("_id");
 
-fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter", {
+fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter" + id, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
@@ -19,10 +19,17 @@ function showProduct(product) {
   document.querySelector(".cookTime").textContent = product.cookTime + "min.";
   document.querySelector(".portion").textContent = product.portions + "pers.";
   document.querySelector(".beskrivelse").textContent = product.description;
-  
-  
-  //Appende
-  //document.querySelector("main").appendChild(copy);
+  document.querySelector(".opskrift_pic").src = `img/${product.img}`;
+  document.querySelector("ol").textContent = product.walkthrough;
+
+  product.ingredients.forEach(showIngredients);
+
+  function showIngredients(ingrediens){
+    const template = document.querySelector("template").content;
+    const copy = template.cloneNode(true);
+    copy.querySelector("li").textContent = ingrediens ;
+    document.querySelector(".ingrediens_list").appendChild(copy);
+  }
 }
 
 /*
