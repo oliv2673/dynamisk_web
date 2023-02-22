@@ -103,7 +103,7 @@ input:checked + span {
 
 /*FONTS*/
 
- h1 {
+ /*h1 {
     font-family: "Medium";
  }
 
@@ -121,4 +121,4 @@ input:checked + span {
 
  ol {
     font-family: "Arima_bold"
- }
+ }*/
