@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="img/fav.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="productlist.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="icon" type="image/x-icon" href="img/fav.svg">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="productlist.css" />
-</head>
-
-<body>
-  <header>
-    <a href="index.html">
-      <img class="logo" src="img/whiteLogo.svg" alt="logo" />
-    </a>
-    <div class="burgermenu">
-      <button class="toggle-btn">Menu</button>
-      <nav>
-        <ul class="menu">
-          <li><a href="category.html">Oversigt</a></li>
-          <li><a href="productlist.html">Opskrifter</a></li>
-        </ul>
-      </nav>
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logo" src="img/whiteLogo.svg" alt="logo" />
+      </a>
+      <div class="burgermenu">
+        <button class="toggle-btn">Menu</button>
+        <nav>
+          <ul class="menu">
+            <li><a href="category.html">Oversigt</a></li>
+            <li><a href="productlist.html">Opskrifter</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="grid_1-5">
@@ -64,15 +64,15 @@
               </label>
             </div>
             <div class="checkbox_grid">
-              <div class="checkbox1">
+              <div class="vege_check">
                 <input type="checkbox" id="diæt1" />
                 <label for="diæt1"> Vegetarisk</label>
               </div>
-              <div class="checkbox2">
+              <div class="vegan_check">
                 <input type="checkbox" id="diæt2" />
                 <label for="diæt2"> Vegansk</label>
               </div>
-              <div class="checkbox3">
+              <div class="pesc_check">
                 <input type="checkbox" id="diæt3" />
                 <label for="diæt3"> Pescitar</label>
               </div>
@@ -82,7 +82,9 @@
         <div class="grid_1-1">
           <template id="product_template">
             <article class="dish_card">
-              <img src="img/danmark_dessert1.webp" alt="billede af opskrift" />
+              <a class="go_to" href="product.html">
+                <img src="img/danmark_dessert1.webp" alt="billede af opskrift" />
+              </a>
               <section>
                 <h1>Titel</h1>
                 <div class="grid_1-1-1">
@@ -102,16 +104,16 @@
                       <p class="antal">...pers</p>
                     </div>
                   </div>
-                  <div>
-                    <div class="icon_1-1 vegetarisk">
+                  <div class="diaet">
+                    <div class="icon_1-1 vegetarisk dont_show">
                       <img class="icons" src="img/icons/vegetarian.svg" alt="diæt" />
                       <p>vegetarisk</p>
                     </div>
-                    <div class="icon_1-1 vegansk">
+                    <div class="icon_1-1 vegansk dont_show">
                       <img class="icons" src="img/icons/vegan.svg" alt="diæt" />
                       <p>vegansk</p>
                     </div>
-                    <div class="icon_1-1 pescetar display_none">
+                    <div class="icon_1-1 pescetar dont_show">
                       <img class="icons" src="img/icons/fish.svg" alt="diæt" />
                       <p>pescetar</p>
                     </div>
@@ -185,13 +187,11 @@
           </article> -->
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <p>hvad skal der være her?</p>
-  </footer>
-  <script src="js/productlist.js"></script>
-  <script src="js/burgermenu.js"></script>
-</body>
-
+    </main>
+    <footer>
+      <p>hvad skal der være her?</p>
+    </footer>
+    <script src="js/productlist.js"></script>
+    <script src="js/burgermenu.js"></script>
+  </body>
 </html>
