@@ -135,7 +135,7 @@ a {
   display: flex;
   height: 300px;
   padding: 5px 40px;
-
+  margin-top: -10rem;
   border: 1px;
   border-radius: 25px;
   opacity: 0.75;
@@ -196,58 +196,6 @@ a {
   display: none;
 }
 @media (max-width: 600px) {
-  .slideshow-container_2 {
-    display: contents;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  .slideshow-container {
-    display: none;
-  }
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  .prev,
-  .next {
-    display: none;
-  }
-  /* Next & previous buttons */
-  .prev2,
-  .next2 {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    z-index: 1;
-  }
-  .prev2 {
-    left: 0;
-  }
-  /* Position the "next button" to the right */
-  .next2 {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev2:hover,
-  .next2:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
   .button {
     height: 300px;
     left: calc(50% - 240px);
