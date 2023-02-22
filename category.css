@@ -53,7 +53,7 @@ a {
 
   .Europakort {
     grid-column: 2/3;
-    grid-row: span 1;
+    grid-row: 1;
   }
 
   .mobil {
