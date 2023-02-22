@@ -1,15 +1,22 @@
 //vi hiver fat i url for at fange en specifik parameter
 const urlParams = new URLSearchParams(window.location.search);
 const subcategory = urlParams.get("subcategory");
+//const subcategory = urlParams.get("category");
 let products = [];
 
 let myUrl;
 
+//vi sørger for at der er content på siden der passer til hvilken indgang man har valgt
 if (subcategory == null) {
   myUrl = "https://madopskrifter-41a3.restdb.io/rest/opskrifter";
 } else {
   myUrl = `https://madopskrifter-41a3.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
 }
+/* if (category == null) {
+  myUrl = "https://madopskrifter-41a3.restdb.io/rest/opskrifter";
+} else {
+  myUrl = `https://madopskrifter-41a3.restdb.io/rest/opskrifter?q={"category": "${category}"}`;
+} */
 
 //backup database
 /* if (subcategory == null) {
@@ -55,10 +62,10 @@ function showProducts() {
 //tilføj eventlistener på checkboxene
 document.querySelector(".vege_check input").addEventListener("click", selected);
 
-function selected(vegetarian, vegan, pescetarian) {
+function selected(product) {
   //check value off checkbox
   if (document.querySelector(".vege_check input").checked == true) {
-    document.querySelector(".vegetarisk").classList.add("test");
+    //document.querySelector(".vegetarisk").classList.add("test");
     //kør loop
     products.forEach(showSelected);
   } else {
@@ -68,12 +75,13 @@ function selected(vegetarian, vegan, pescetarian) {
 
 function showSelected(product) {
   if (product.vegetarian == false) {
-    document.querySelector("article").classList.add(".test");
+    document.querySelector("article").classList.add("dont_show");
 
     console.log("only vegatarien");
   } else {
     document.querySelector("article").classList.remove("dont_show");
   }
+  console.log("show selected");
 }
 
 /* 
@@ -92,7 +100,7 @@ function showProduct(product) {
   copy.querySelector(".antal").textContent = product.portions + " pers";
   copy.querySelector(".beskrivelse").textContent = product.description;
   copy.querySelector("img").src = `img/${product.img}`;
-  copy.querySelector("go_to").setAttribute("href", `product.html?id=${product._id}`);
+  copy.querySelector(".go_to").setAttribute("href", `https://madopskrifter-41a3.restdb.io/rest/opskrifter/?id=${product._id}`);
 
   //vegetarisk
   if (product.vegetarian == true) {
