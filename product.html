@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="img/fav.svg" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="product.css" />
-  </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <img class="logo" src="img/whiteLogo.svg" alt="logo" />
-      </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="img/fav.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="img/whiteLogo.svg" alt="logo" />
+    </a>
+    <div class="burgermenu">
+      <button class="toggle-btn">Menu</button>
       <nav>
         <ul class="menu">
           <li><a href="category.html">Oversigt</a></li>
           <li><a href="productlist.html">Opskrifter</a></li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <section>
-        <div class="grid_1-2">
-          <div><img class="opskrift_pic" src="img/finland_hovedret2.webp" alt="Billede af opskrift" /></div>
-          <div class="opskrift_info">
-            <h1>Opskrift</h1>
-            <div class="grid_1-1-1">
-              <div>
-                <div class="icon_1-1">
-                  <img class="icons" src="img/icons/prep_time.svg" alt="prepTimer" />
-                  <p class="prepTime">..min</p>
-                </div>
-                <div class="icon_1-1">
-                  <img class="icons" src="img/icons/cook_time.svg" alt="cookTimer" />
-                  <p class="cookTime">..min</p>
-                </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="grid_1-2">
+        <div><img class="opskrift_pic" src="img/finland_hovedret2.webp" alt="Billede af opskrift" /></div>
+        <div class="opskrift_info">
+          <h1>Opskrift</h1>
+          <div class="grid_1-1-1">
+            <div>
+              <div class="icon_1-1">
+                <img class="icons" src="img/icons/prep_time.svg" alt="prepTimer">
+                <p class="prepTime">..min</p>
               </div>
-              <div>
-                <div class="icon_1-1">
-                  <img class="icons" src="img/icons/persons.svg" alt="portion" />
-                  <p class="portion">..pers</p>
-                </div>
-              </div>
-              <div>
-                <div class="icon_1-1 diæt">
-                  <img class="icons" src="xx" alt="diæt" />
-                  <p class="diæter">veg/pec</p>
-                </div>
+              <div class="icon_1-1">
+                <img class="icons" src="img/icons/cook_time.svg" alt="cookTimer">
+                <p class="cookTime">..min</p>
               </div>
             </div>
-            <p class="beskrivelse">Beskrivelse</p>
-          </div>
-        </div>
-        <div class="grid_1-2">
-          <div>
-            <div class="ingredienser">
-              <h2>Ingredienser</h2>
+            <div>
+              <div class="icon_1-1">
+                <img class="icons" src="img/icons/persons.svg" alt="portion">
+                <p class="portion">..pers</p>
+              </div>
             </div>
-            <ul class="ingrediens_list">
-              <template>
-                <li><input type="checkbox"> <span></span></li>
-              </template>
-            </ul>
+            <div>
+              <div class="icon_1-1 vegetarisk dont_show">
+                <img class="icons" src="img/icons/vegetarian.svg" alt="diæt">
+                <p class="diæter">Vegetarisk</p>
+              </div>
+              <div class="icon_1-1 vegansk dont_show">
+                <img class="icons" src="img/icons/vegan.svg" alt="diæt">
+                <p class="diæter">Vegansk</p>
+              </div>
+              <div class="icon_1-1 pescetar dont_show">
+                <img class="icons" src="img/icons/fish.svg" alt="diæt">
+                <p class="diæter">Pescetar</p>
+              </div>
+            </div>
           </div>
           <div>
-            <h2 class="gennemgang">Gennemgang</h2>
-            <ol class="gennemgang_list">
-              <li>1</li>
-            </ol>
+            <div class="icon_1-1 diæt">
+              <img class="icons" src="xx" alt="diæt" />
+              <p class="diæter">veg/pec</p>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>hvad skal der være her?</p>
-    </footer>
-    <script src="js/product.js"></script>
-  </body>
+        <p class="beskrivelse">Beskrivelse</p>
+      </div>
+      </div>
+      <div class="grid_1-2">
+        <div>
+          <div class="ingredienser">
+            <h2>Ingredienser</h2>
+          </div>
+          <ul class="ingrediens_list">
+            <template>
+              <li><input type="checkbox"> <span></span></li>
+            </template>
+          </ul>
+        </div>
+        <div>
+          <h2 class="gennemgang">Gennemgang</h2>
+          <ol class="gennemgang_list">
+            <li>1</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>hvad skal der være her?</p>
+  </footer>
+  <script src="js/product.js"></script>
+  <script src="js/burgermenu.js"></script>
+</body>
+
 </html>
