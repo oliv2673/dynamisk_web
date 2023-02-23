@@ -84,6 +84,7 @@ h1 {
 .gennemgang {
     color: var(--tertiary);
     padding: 5px;
+
 }
 
 .ingredienser {
@@ -103,7 +104,7 @@ input:checked + span {
 
 /*FONTS*/
 
- /*h1 {
+ h1 {
     font-family: "Medium";
  }
 
@@ -113,6 +114,7 @@ input:checked + span {
 
  ul li {
     font-family: "kodchasan_semibold";
+    list-style-type: none;
  }
 
  .prepTime, .cookTime, .portion, .diæter {
@@ -121,4 +123,4 @@ input:checked + span {
 
  ol {
     font-family: "Arima_bold"
- }*/
+ }
