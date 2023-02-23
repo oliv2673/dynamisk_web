@@ -133,6 +133,7 @@ section {
     background-color: var(--tertiary);
     font-family: "Arima_regular";
     padding-left: 10px;
+    font-size: 1.4rem;
   }
   .beskrivelse {
     font-size: 0.7rem;
