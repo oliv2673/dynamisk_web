@@ -1,15 +1,29 @@
 //vi hiver fat i url for at fange en specifik parameter
 const urlParams = new URLSearchParams(window.location.search);
 const subcategory = urlParams.get("subcategory");
+//const subcategory = urlParams.get("category");
 let products = [];
 
 let myUrl;
 
+//vi sørger for at der er content på siden der passer til hvilken indgang man har valgt
 if (subcategory == null) {
   myUrl = "https://madopskrifter-41a3.restdb.io/rest/opskrifter";
 } else {
   myUrl = `https://madopskrifter-41a3.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
 }
+/* if (category == null) {
+  myUrl = "https://madopskrifter-41a3.restdb.io/rest/opskrifter";
+} else {
+  myUrl = `https://madopskrifter-41a3.restdb.io/rest/opskrifter?q={"category": "${category}"}`;
+} */
+
+//backup database
+/* if (subcategory == null) {
+  myUrl = "https://backup-de80.restdb.io/rest/opskrifter";
+} else {
+  myUrl = `https://backup-de80.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
+} */
 
 fetch(myUrl, {
   method: "get",
@@ -24,49 +38,55 @@ fetch(myUrl, {
     showProducts();
   });
 
+//backup database
+/* fetch(myUrl, {
+  method: "get",
+  headers: {
+    "x-apikey": "63f4c727478852088da68527",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    //laver et global variabel (alle kan til gå den)
+    products = data;
+    showProducts();
+  }); */
+
 function showProducts() {
-  //document.querySelector(".list").innerHTML = "";
+  //    document.querySelector("grid_1-1").innerHTML = "";
+
   //looper og kalder showProduct
   products.forEach(showProduct);
 }
+
+//tilføj eventlistener på checkboxene
+document.querySelector(".vege_check input").addEventListener("click", selected);
+
+function selected(product) {
+  //check value off checkbox
+  if (document.querySelector(".vege_check input").checked == true) {
+    //document.querySelector(".vegetarisk").classList.add("test");
+    //kør loop
+    products.forEach(showSelected);
+  } else {
+    document.querySelector(".vegetarisk").classList.remove("test");
+  }
+}
+
+function showSelected(product) {
+  if (product.vegetarian == false) {
+    document.querySelector("article").classList.add("dont_show");
+
+    console.log("only vegatarien");
+  } else {
+    document.querySelector("article").classList.remove("dont_show");
+  }
+  console.log("show selected");
+}
+
 /* 
 document.querySelector("#filter_organize").addEventListener("change", sorting); */
-/* 
-function sorting() {
-  console.log(this.value);
-  // sort by productdisplayname
-  if (this.value == "A-Z") {
-    products.sort((a, b) => {
-      const nameA = a.productdisplayname.toUpperCase(); // ignore upper and lowercase
-      const nameB = b.productdisplayname.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      // names must be equal
-      return 0;
-    });
-  }
-  if (this.value == "Z-A") {
-    products.sort((a, b) => {
-      const nameA = a.productdisplayname.toUpperCase(); // ignore upper and lowercase
-      const nameB = b.productdisplayname.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return 1;
-      }
-      if (nameA > nameB) {
-        return -1;
-      }
-      // names must be equal
-      return 0;
-    });
-  }
-  console.log(products);
-  showProducts();
-}
- */
+
 function showProduct(product) {
   console.log(product);
   //fang template
@@ -75,40 +95,31 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
   //ændre indhold
   copy.querySelector("h1").textContent = product.titel;
-  copy.querySelector(".preptime").textContent = product.prepTime;
-  copy.querySelector(".cooktime").textContent = product.cookTime;
-  copy.querySelector(".antal").textContent = product.portion;
+  copy.querySelector(".preptime").textContent = product.prepTime + " min";
+  copy.querySelector(".cooktime").textContent = product.cookTime + " min";
+  copy.querySelector(".antal").textContent = product.portions + " pers";
   copy.querySelector(".beskrivelse").textContent = product.description;
-  //copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  copy.querySelector("article").setAttribute("href", `product.html?id=${product._id}`);
+  copy.querySelector("img").src = `img/${product.img}`;
+  copy.querySelector(".go_to").setAttribute("href", `https://madopskrifter-41a3.restdb.io/rest/opskrifter/?id=${product._id}`);
 
   //vegetarisk
-  if (vegetarian == true) {
-    copy.querySelector(".vegetarisk").classList.add("show_vegetarisk");
-    copy.querySelector(".vegetarisk p").textContent = "Vegetarisk";
+  if (product.vegetarian == true) {
+    copy.querySelector(".vegetarisk").classList.remove("dont_show");
 
     console.log("added vegetarisk");
-  } else {
-    copy.querySelector(".vegetarisk").classList.add("display_none");
   }
   //vegansk
-  if (vegan == true) {
-    copy.querySelector(".vegansk").classList.add("show_vegansk");
-    copy.querySelector(".vegansk p").textContent = "Vegansk";
+  if (product.vegan == true) {
+    copy.querySelector(".vegan").classList.remove("dont_show");
 
     console.log("added vegansk");
-  } else {
-    copy.querySelector(".vegansk").classList.add("display_none");
   }
   //pescetar
-  /* if (pescetar == true) {
-    copy.querySelector(".pescetar").classList.add("show_pescetar");
-    copy.querySelector(".pescetar p").textContent = "pescetar";
+  if (product.pescetarian == true) {
+    copy.querySelector(".pescetar").classList.remove("dont_show");
 
     console.log("added pescetar");
-  } else {
-    copy.querySelector(".pescetar").classList.add("display_none");
-  } */
+  }
 
   //append (sæt ind)
   document.querySelector(".grid_1-1").appendChild(copy);

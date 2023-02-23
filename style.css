@@ -174,10 +174,6 @@ footer {
   }
 }
 
-.display_none {
-  display: none;
-}
-
 /* burgermenu */
 .toggle-btn {
   display: none;
@@ -212,4 +208,8 @@ footer {
     display: flex;
     flex-flow: column;
   }
+}
+
+.display_none {
+  display: none;
 }
