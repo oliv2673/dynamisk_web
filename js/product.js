@@ -14,7 +14,7 @@ const id = urlParams.get("_id");
 fetch("https://backup-de80.restdb.io/rest/opskrifter/" + id, {
   method: "get",
   headers: {
-    "x-apikey": "63f32ac7478852088da68490",
+    "x-apikey": "63f4c727478852088da68527",
   },
 })
   .then((response) => response.json())
