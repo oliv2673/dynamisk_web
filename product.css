@@ -14,10 +14,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    .diæt {
-        margin-left: 200px;
-    }
 
     .icon_1-1 {
         display: flex;
@@ -105,6 +101,9 @@ input:checked + span {
     text-decoration: line-through;
 }
 
+.dont_show {
+    display: none;
+  }
 
 
 /*FONTS*/

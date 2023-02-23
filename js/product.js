@@ -39,7 +39,28 @@ function showProduct(product) {
     copy.querySelector("li span").textContent = ingrediens;
     document.querySelector(".ingrediens_list").appendChild(copy);
   }
+
+  //Vegetarisk
+  if (product.vegetarian == true) {
+    document.querySelector(".vegetarisk").classList.remove("dont_show");
+
+    console.log("added vegetarisk");
+  }
+  //vegansk
+  if (product.vegan == true) {
+    document.querySelector(".vegan").classList.remove("dont_show");
+
+    console.log("added vegansk");
+  }
+  //pescetar
+  if (product.pescetarian == true) {
+    document.querySelector(".pescetar").classList.remove("dont_show");
+
+    console.log("added pescetar");
+  }
 }
+
+
 
 /*
 _id: "63f28a6caa86075000065d95"
