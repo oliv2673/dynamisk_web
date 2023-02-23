@@ -19,13 +19,13 @@ if (subcategory == null) {
 } */
 
 //backup database
-/* if (subcategory == null) {
+if (subcategory == null) {
   myUrl = "https://backup-de80.restdb.io/rest/opskrifter";
 } else {
   myUrl = `https://backup-de80.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
-} */
+}
 
-fetch(myUrl, {
+/* fetch(myUrl, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
@@ -36,10 +36,10 @@ fetch(myUrl, {
     //laver et global variabel (alle kan til gå den)
     products = data;
     showProducts();
-  });
+  }); */
 
 //backup database
-/* fetch(myUrl, {
+fetch(myUrl, {
   method: "get",
   headers: {
     "x-apikey": "63f4c727478852088da68527",
@@ -50,7 +50,7 @@ fetch(myUrl, {
     //laver et global variabel (alle kan til gå den)
     products = data;
     showProducts();
-  }); */
+  });
 
 function showProducts() {
   //    document.querySelector("grid_1-1").innerHTML = "";
@@ -100,7 +100,7 @@ function showProduct(product) {
   copy.querySelector(".antal").textContent = product.portions + " pers";
   copy.querySelector(".beskrivelse").textContent = product.description;
   copy.querySelector("img").src = `img/${product.img}`;
-  copy.querySelector(".go_to").setAttribute("href", `https://madopskrifter-41a3.restdb.io/rest/opskrifter/?id=${product._id}`);
+  copy.querySelector(".go_to").setAttribute("href", `product.html?_id=${product._id}`);
 
   //vegetarisk
   if (product.vegetarian == true) {

@@ -14,10 +14,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    .diæt {
-        margin-left: 200px;
-    }
 
     .icon_1-1 {
         display: flex;
@@ -42,6 +38,11 @@
     .ingrediens_list {
         border-right: 2px;
         border-color: var(--secondary);
+        margin-top: 10px;
+    }
+
+    .gennemgang_list {
+        margin-left: 30px;
     }
 }
 
@@ -84,6 +85,7 @@ h1 {
 .gennemgang {
     color: var(--tertiary);
     padding: 5px;
+
 }
 
 .ingredienser {
@@ -99,11 +101,14 @@ input:checked + span {
     text-decoration: line-through;
 }
 
+.dont_show {
+    display: none;
+  }
 
 
 /*FONTS*/
 
- /*h1 {
+ h1 {
     font-family: "Medium";
  }
 
@@ -113,6 +118,7 @@ input:checked + span {
 
  ul li {
     font-family: "kodchasan_semibold";
+    list-style-type: none;
  }
 
  .prepTime, .cookTime, .portion, .diæter {
@@ -121,4 +127,4 @@ input:checked + span {
 
  ol {
     font-family: "Arima_bold"
- }*/
+ }
