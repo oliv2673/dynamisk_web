@@ -1,7 +1,17 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("_id");
 
-fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
+/* fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
+  method: "get",
+  headers: {
+    "x-apikey": "63f32ac7478852088da68490",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => showProduct(data)); */
+
+//backup
+fetch("https://backup-de80.restdb.io/rest/opskrifter/" + id, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
@@ -9,7 +19,6 @@ fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
 })
   .then((response) => response.json())
   .then((data) => showProduct(data));
-
 
 function showProduct(product) {
   console.log(product);
@@ -24,10 +33,10 @@ function showProduct(product) {
 
   product.ingredients.forEach(showIngredients);
 
-  function showIngredients(ingrediens){
+  function showIngredients(ingrediens) {
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
-    copy.querySelector("li span").textContent = ingrediens ;
+    copy.querySelector("li span").textContent = ingrediens;
     document.querySelector(".ingrediens_list").appendChild(copy);
   }
 }
