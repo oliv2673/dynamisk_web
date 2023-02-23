@@ -18,14 +18,7 @@ if (subcategory == null) {
   myUrl = `https://madopskrifter-41a3.restdb.io/rest/opskrifter?q={"category": "${category}"}`;
 } */
 
-//backup database
-if (subcategory == null) {
-  myUrl = "https://backup-de80.restdb.io/rest/opskrifter";
-} else {
-  myUrl = `https://backup-de80.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
-}
-
-/* fetch(myUrl, {
+fetch(myUrl, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
@@ -36,8 +29,14 @@ if (subcategory == null) {
     //laver et global variabel (alle kan til gå den)
     products = data;
     showProducts();
-  }); */
+  });
 
+/* //backup database
+if (subcategory == null) {
+  myUrl = "https://backup-de80.restdb.io/rest/opskrifter";
+} else {
+  myUrl = `https://backup-de80.restdb.io/rest/opskrifter?q={"subcategory": "${subcategory}"}`;
+}
 //backup database
 fetch(myUrl, {
   method: "get",
@@ -50,7 +49,7 @@ fetch(myUrl, {
     //laver et global variabel (alle kan til gå den)
     products = data;
     showProducts();
-  });
+  }); */
 
 function showProducts() {
   //    document.querySelector("grid_1-1").innerHTML = "";

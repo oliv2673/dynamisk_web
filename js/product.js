@@ -1,16 +1,16 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("_id");
 
-/* fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
+fetch("https://madopskrifter-41a3.restdb.io/rest/opskrifter/" + id, {
   method: "get",
   headers: {
     "x-apikey": "63f32ac7478852088da68490",
   },
 })
   .then((response) => response.json())
-  .then((data) => showProduct(data)); */
+  .then((data) => showProduct(data));
 
-//backup
+/* //backup
 fetch("https://backup-de80.restdb.io/rest/opskrifter/" + id, {
   method: "get",
   headers: {
@@ -18,7 +18,7 @@ fetch("https://backup-de80.restdb.io/rest/opskrifter/" + id, {
   },
 })
   .then((response) => response.json())
-  .then((data) => showProduct(data));
+  .then((data) => showProduct(data));*/
 
 function showProduct(product) {
   console.log(product);
