@@ -135,6 +135,10 @@ footer {
   width: 100%;
   height: auto;
   background-color: #f5bd91;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "regular";
 }
 
 @media (min-width: 750px) {
